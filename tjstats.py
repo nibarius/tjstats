@@ -62,7 +62,9 @@ def processTitles(titles):
 def writeDataFile(weeks):
     with open("tjstats.dat", "w") as f:
         for i, week in enumerate(weeks):
-            if i is 0:
+            if week is 0:
+                break
+            elif i is 0:
                 f.write(str(i) + ",Start," + str(week) + "\n")
             else:
                 f.write(str(i) + ",Week " + str(i) + "," + str(week) + "\n")
